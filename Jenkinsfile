@@ -4,7 +4,7 @@ pipeline {
         stage("Build") {
             steps {
                 sh "sudo rm -rf node_modules"
-                sh "sudo npm install"
+                sh "sudo npm install --force"
                 sh "sudo npm run build"
             }
         }
