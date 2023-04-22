@@ -3,6 +3,7 @@ pipeline {
      stages {
         stage("Build") {
             steps {
+                sh "chown -R jenkins:jenkins node_modules"
                 sh "sudo npm install"
                 sh "sudo npm run build"
             }
